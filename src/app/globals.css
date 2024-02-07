@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 235, 235, 235;
+  --hover-rgb: 25, 25, 25;
+  --hover-bg-rgb: 245, 245, 245;
+  --hover-bg-lighter-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+    --hover-rgb: 230, 230, 230;
+    --hover-bg-rgb: 25, 25, 25;
+    --hover-bg-lighter-rgb: 35, 35, 35;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+button, input, select {
+  background: rgb(var(--hover-bg-rgb));
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+}
+button:hover, input:hover, select:hover {
+  background: rgb(var(--hover-bg-lighter-rgb));
+}
+input:focus, select:focus {
+  outline: none;
+}
+
+.li{
+  background: rgb(var(--hover-bg-rgb));
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+}
+.li:hover {
+  background: rgb(var(--hover-bg-lighter-rgb));
+}
+
+::-webkit-scrollbar {
+  width: 0.7rem;
+}
+::-webkit-scrollbar-track {
+  background: rgb(var(--background-end-rgb));
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--hover-bg-lighter-rgb));
+  border-radius: 0.3rem;
+}
